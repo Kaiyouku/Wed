@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EyeWear - Sản phẩm</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header id="header">
+    <div id="logo">
+        <a href="index.html">EyeWear</a>
+    </div>
+
+    <div id="search">
+        <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+        <button id="searchButton">Tìm kiếm</button>
+    </div>
+
+    <nav id="navbar">
+        <a href="index.html">Trang chủ</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="index.html#about">Giới thiệu</a>
+        <a href="index.html#contact">Liên hệ</a>
+    </nav>
+
+    <div id="cart">
+        <a href="cart.html">🛒 Giỏ hàng <span id="cartCount">(0)</span></a>
+    </div>
+</header>
+
+<main>
+
+    <section id="products" class="products-page">
+        <div id="productsHeader">
+            <div>
+                <h2 id="pageTitle">Tất cả sản phẩm</h2>
+                <p id="categoryDescription">Danh sách sản phẩm của EyeWear</p>
+            </div>
+            <a href="index.html">← Về trang chủ</a>
+        </div>
+
+        <div class="product-toolbar">
+            <div class="filter-group">
+                <label for="categoryFilter">Danh mục:</label>
+                <select id="categoryFilter">
+                    <option value="">Tất cả</option>
+                    <option value="1">Kính cận</option>
+                    <option value="2">Kính râm</option>
+                    <option value="3">Kính thời trang</option>
+                    <option value="4">Kính chống ánh sáng xanh</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="sortSelect">Sắp xếp:</label>
+                <select id="sortSelect">
+                    <option value="default">Mặc định</option>
+                    <option value="priceAsc">Giá thấp → cao</option>
+                    <option value="priceDesc">Giá cao → thấp</option>
+                    <option value="nameAsc">Tên A → Z</option>
+                    <option value="nameDesc">Tên Z → A</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="productList" class="product-list">
+            <p class="loading">Đang tải sản phẩm...</p>
+        </div>
+    </section>
+
+</main>
+
+<footer id="footer">
+    <div id="footerContent">
+        <div id="footerAbout">
+            <h3>EyeWear</h3>
+            <p>Cửa hàng kính mắt trực tuyến.</p>
+        </div>
+
+        <div id="footerLinks">
+            <h3>Liên kết</h3>
+            <a href="index.html">Trang chủ</a>
+            <a href="products.html">Sản phẩm</a>
+            <a href="index.html#about">Giới thiệu</a>
+            <a href="index.html#contact">Liên hệ</a>
+        </div>
+
+        <div id="contact">
+            <h3>Liên hệ</h3>
+            <p>📍 TP. Hồ Chí Minh</p>
+            <p>📞 039 403 8274</p>
+            <p>✉ nhomwed@gmail.com</p>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>© 2026 EyeWear. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="../js/products.js"></script>
+</body>
+</html>

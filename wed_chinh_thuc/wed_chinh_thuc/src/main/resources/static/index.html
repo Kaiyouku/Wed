@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EyeWear - Kính mắt trực tuyến</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header id="header">
+
+        <!-- LOGO -->
+
+        <div id="logo">
+
+            <a href="index.html">
+                EyeWear
+            </a>
+
+        </div>
+
+
+        <!-- THANH TÌM KIẾM -->
+
+        <div id="search">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Tìm kiếm sản phẩm..."
+            >
+
+            <button id="searchButton">
+                Tìm kiếm
+            </button>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <nav id="navbar">
+
+            <a href="index.html">
+                Trang chủ
+            </a>
+
+            <a href="#products">
+                Sản phẩm
+            </a>
+
+            <a href="#about">
+                Giới thiệu
+            </a>
+
+            <a href="#contact">
+                Liên hệ
+            </a>
+
+        </nav>
+
+
+        <!-- GIỎ HÀNG -->
+
+        <div id="cart">
+
+            <a href="cart.html">
+
+                🛒 Giỏ hàng
+
+                <span id="cartCount">
+                    (0)
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         BANNER
+         ===================================================== -->
+
+    <section id="banner">
+
+        <div id="bannerContent">
+
+            <h1>
+                Kính mắt phong cách của bạn
+            </h1>
+
+            <p>
+
+                Khám phá những mẫu kính thời trang,
+                chất lượng và phù hợp với phong cách của bạn.
+
+            </p>
+
+            <a
+                href="#products"
+                id="shopNowButton"
+            >
+                Mua ngay
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DANH MỤC
+         ===================================================== -->
+
+    <section id="categories">
+
+        <h2>
+            Danh mục sản phẩm
+        </h2>
+
+
+        <div id="categoryList">
+
+
+            <!-- ================= KÍNH CẬN ================= -->
+
+            <div class="category">
+
+                <div class="categoryImage">
+
+                    <img src="img/Category/KinhCan.webp" alt="Kính cận">
+
+                </div>
+
+                <h3>
+                    Kính cận
+                </h3>
+
+                <a
+                    href="products.html?category=1"
+                >
+                    Xem sản phẩm
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= KÍNH RÂM ================= -->
+
+            <div class="category">
+
+                <div class="categoryImage">
+
+                    <img src="img/Category/KinhRam.jpg" alt="Kính râm">
+
+                </div>
+
+                <h3>
+                    Kính râm
+                </h3>
+
+                <a
+                    href="products.html?category=2"
+                >
+                    Xem sản phẩm
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= KÍNH THỜI TRANG ================= -->
+
+            <div class="category">
+
+                <div class="categoryImage">
+
+                    <img src="img/Category/KinhThoiTrang.webp" alt="Kính thời trang">
+
+                </div>
+
+                <h3>
+                    Kính thời trang
+                </h3>
+
+                <a
+                    href="products.html?category=3"
+                >
+                    Xem sản phẩm
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= KÍNH ÁNH SÁNG XANH ================= -->
+
+            <div class="category">
+
+                <div class="categoryImage">
+
+					<img src="img/Category/KinhChongASX.jpg"
+					alt="Kính chống ánh sáng xanh">
+                </div>
+
+                <h3>
+                    Kính chống ánh sáng xanh
+                </h3>
+
+                <a
+                    href="products.html?category=4"
+                >
+                    Xem sản phẩm
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SẢN PHẨM NỔI BẬT
+         ===================================================== -->
+
+    <section id="products">
+
+        <div id="productsHeader">
+
+            <h2>
+                Sản phẩm nổi bật
+            </h2>
+
+            <a href="products.html">
+                Xem tất cả
+            </a>
+
+        </div>
+
+
+        <!--
+            JavaScript sẽ lấy dữ liệu từ:
+
+            GET /api/products
+
+            và hiển thị vào đây.
+        -->
+
+        <div id="productList">
+
+            <p class="loading">
+                Đang tải sản phẩm...
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GIỚI THIỆU
+         ===================================================== -->
+
+    <section id="about">
+
+        <div id="aboutImage">
+
+            <img
+                src="images/about.jpg"
+                alt="Cửa hàng kính mắt"
+            >
+
+        </div>
+
+
+        <div id="aboutContent">
+
+            <h2>
+                Về EyeWear
+            </h2>
+
+            <p>
+
+                EyeWear là cửa hàng kính mắt trực tuyến,
+                cung cấp các sản phẩm kính cận, kính râm,
+                kính thời trang và kính chống ánh sáng xanh.
+
+            </p>
+
+            <p>
+
+                Chúng tôi hướng đến việc mang đến những sản phẩm
+                chất lượng với thiết kế hiện đại và mức giá phù hợp.
+
+            </p>
+
+            <a
+                href="#contact"
+                id="aboutButton"
+            >
+                Tìm hiểu thêm
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ƯU ĐIỂM
+         ===================================================== -->
+
+    <section id="features">
+
+        <h2>
+            Tại sao chọn EyeWear?
+        </h2>
+
+
+        <div id="featureList">
+
+
+            <div class="feature">
+
+                <div class="featureIcon">
+                    🚚
+                </div>
+
+                <h3>
+                    Giao hàng nhanh
+                </h3>
+
+                <p>
+                    Giao hàng tận nơi trên toàn quốc.
+                </p>
+
+            </div>
+
+
+
+            <div class="feature">
+
+                <div class="featureIcon">
+                    ✓
+                </div>
+
+                <h3>
+                    Sản phẩm chất lượng
+                </h3>
+
+                <p>
+                    Sản phẩm được kiểm tra trước khi giao.
+                </p>
+
+            </div>
+
+
+
+            <div class="feature">
+
+                <div class="featureIcon">
+                    💬
+                </div>
+
+                <h3>
+                    Tư vấn tận tình
+                </h3>
+
+                <p>
+                    Hỗ trợ khách hàng lựa chọn sản phẩm.
+                </p>
+
+            </div>
+
+
+
+            <div class="feature">
+
+                <div class="featureIcon">
+                    🔄
+                </div>
+
+                <h3>
+                    Đổi trả dễ dàng
+                </h3>
+
+                <p>
+                    Hỗ trợ đổi sản phẩm theo chính sách.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer id="footer">
+
+        <div id="footerContent">
+
+
+            <div id="footerAbout">
+
+                <h3>
+                    EyeWear
+                </h3>
+
+                <p>
+                    Cửa hàng kính mắt trực tuyến.
+                </p>
+
+            </div>
+
+
+
+            <div id="footerLinks">
+
+                <h3>
+                    Liên kết
+                </h3>
+
+                <a href="index.html">
+                    Trang chủ
+                </a>
+
+                <a href="products.html">
+                    Sản phẩm
+                </a>
+
+                <a href="#about">
+                    Giới thiệu
+                </a>
+
+                <a href="#contact">
+                    Liên hệ
+                </a>
+
+            </div>
+
+
+
+            <div id="contact">
+
+                <h3>
+                    Liên hệ
+                </h3>
+
+                <p>
+                    📍 TP. Hồ Chí Minh
+                </p>
+
+                <p>
+                    📞 039 403 8274
+                </p>
+
+                <p>
+                    ✉ nhomwed@gmail.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="copyright">
+
+            <p>
+                © 2026 EyeWear. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
