@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EyeWear - Giỏ hàng</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header id="header">
+
+    <div id="logo">
+        <a href="index.html">EyeWear</a>
+    </div>
+
+    <div id="search">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Tìm kiếm sản phẩm..."
+        >
+        <button id="searchButton">Tìm kiếm</button>
+    </div>
+
+    <nav id="navbar">
+        <a href="index.html">Trang chủ</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="index.html#about">Giới thiệu</a>
+        <a href="index.html#contact">Liên hệ</a>
+    </nav>
+
+    <div id="cart">
+        <a href="cart.html">
+            🛒 Giỏ hàng
+            <span id="cartCount">(0)</span>
+        </a>
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="cart-page">
+
+        <div class="cart-header">
+
+            <div>
+                <h1>Giỏ hàng</h1>
+                <p id="cartDescription">
+                    Kiểm tra sản phẩm trước khi thanh toán.
+                </p>
+            </div>
+
+            <a href="products.html">
+                ← Tiếp tục mua hàng
+            </a>
+
+        </div>
+
+
+        <div class="cart-layout">
+
+            <div id="cartList" class="cart-list">
+                <p class="loading">Đang tải giỏ hàng...</p>
+            </div>
+
+
+            <aside class="cart-summary">
+
+                <h2>Tổng đơn hàng</h2>
+
+                <div class="summary-row">
+                    <span>Số lượng</span>
+                    <strong id="summaryQuantity">0</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Tạm tính</span>
+                    <strong id="summarySubtotal">0 VNĐ</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Phí vận chuyển</span>
+                    <strong id="summaryShipping">0 VNĐ</strong>
+                </div>
+
+                <hr>
+
+                <div class="summary-total">
+                    <span>Tổng cộng</span>
+                    <strong id="summaryTotal">0 VNĐ</strong>
+                </div>
+
+                <button
+                    id="checkoutButton"
+                    class="checkoutButton">
+                    Thanh toán
+                </button>
+
+                <button
+                    id="clearCartButton"
+                    class="clearCartButton">
+                    Xóa toàn bộ giỏ hàng
+                </button>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer id="footer">
+
+    <div id="footerContent">
+
+        <div id="footerAbout">
+            <h3>EyeWear</h3>
+            <p>Cửa hàng kính mắt trực tuyến.</p>
+        </div>
+
+        <div id="footerLinks">
+            <h3>Liên kết</h3>
+            <a href="index.html">Trang chủ</a>
+            <a href="products.html">Sản phẩm</a>
+            <a href="index.html#about">Giới thiệu</a>
+            <a href="index.html#contact">Liên hệ</a>
+        </div>
+
+        <div id="contact">
+            <h3>Liên hệ</h3>
+            <p>📍 TP. Hồ Chí Minh</p>
+            <p>📞 039 403 8274</p>
+            <p>✉ nhomwed@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div id="copyright">
+        <p>© 2026 EyeWear. All rights reserved.</p>
+    </div>
+
+</footer>
+
+<script src="js/cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EyeWear - Thanh toán</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header id="header">
+
+    <div id="logo">
+        <a href="index.html">EyeWear</a>
+    </div>
+
+    <div id="search">
+        <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+        <button id="searchButton">Tìm kiếm</button>
+    </div>
+
+    <nav id="navbar">
+        <a href="index.html">Trang chủ</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="index.html#about">Giới thiệu</a>
+        <a href="index.html#contact">Liên hệ</a>
+    </nav>
+
+    <div id="cart">
+        <a href="cart.html">🛒 Giỏ hàng <span id="cartCount">(0)</span></a>
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="checkout-page">
+
+        <div class="checkout-header">
+            <div>
+                <h1>Thanh toán</h1>
+                <p>Nhập thông tin nhận hàng và chọn phương thức thanh toán.</p>
+            </div>
+
+            <a href="cart.html">← Quay lại giỏ hàng</a>
+        </div>
+
+
+        <form id="checkoutForm" novalidate>
+
+            <div class="checkout-layout">
+
+                <!-- THÔNG TIN KHÁCH HÀNG -->
+                <div class="checkout-form-box">
+
+                    <h2>Thông tin nhận hàng</h2>
+
+                    <div class="form-group">
+                        <label for="fullName">
+                            Họ và tên <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Nhập họ và tên"
+                        >
+
+                        <small id="fullNameError" class="form-error"></small>
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="phone">
+                                Số điện thoại <span>*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="VD: 0901234567"
+                            >
+
+                            <small id="phoneError" class="form-error"></small>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="email">
+                                Email <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="example@gmail.com"
+                            >
+
+                            <small id="emailError" class="form-error"></small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="address">
+                            Địa chỉ nhận hàng <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="address"
+                            name="address"
+                            rows="4"
+                            placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố"
+                        ></textarea>
+
+                        <small id="addressError" class="form-error"></small>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="note">
+                            Ghi chú
+                        </label>
+
+                        <textarea
+                            id="note"
+                            name="note"
+                            rows="3"
+                            placeholder="Ghi chú cho đơn hàng (không bắt buộc)"
+                        ></textarea>
+                    </div>
+
+
+                    <h2 class="payment-title">
+                        Phương thức thanh toán
+                    </h2>
+
+
+                    <div class="payment-options">
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="cod"
+                                checked
+                            >
+
+                            <div>
+                                <strong>Thanh toán khi nhận hàng (COD)</strong>
+                                <p>Thanh toán cho nhân viên giao hàng khi nhận kính.</p>
+                            </div>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="bank"
+                            >
+
+                            <div>
+                                <strong>Chuyển khoản ngân hàng</strong>
+                                <p>Thông tin chuyển khoản sẽ được hiển thị sau khi đặt hàng.</p>
+                            </div>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="momo"
+                            >
+
+                            <div>
+                                <strong>Ví điện tử</strong>
+                                <p>Hiện tại chỉ mô phỏng phương thức thanh toán.</p>
+                            </div>
+
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="placeOrderButton">
+                        Đặt hàng
+                    </button>
+
+                </div>
+
+
+                <!-- TÓM TẮT ĐƠN HÀNG -->
+                <aside class="checkout-summary">
+
+                    <h2>Đơn hàng của bạn</h2>
+
+                    <div id="checkoutItems">
+                        <p class="loading">Đang tải đơn hàng...</p>
+                    </div>
+
+                    <hr>
+
+                    <div class="summary-row">
+                        <span>Số lượng</span>
+                        <strong id="checkoutQuantity">0</strong>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Tạm tính</span>
+                        <strong id="checkoutSubtotal">0 VNĐ</strong>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Phí vận chuyển</span>
+                        <strong id="checkoutShipping">0 VNĐ</strong>
+                    </div>
+
+                    <hr>
+
+                    <div class="summary-total">
+                        <span>Tổng cộng</span>
+                        <strong id="checkoutTotal">0 VNĐ</strong>
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<footer id="footer">
+
+    <div id="footerContent">
+
+        <div id="footerAbout">
+            <h3>EyeWear</h3>
+            <p>Cửa hàng kính mắt trực tuyến.</p>
+        </div>
+
+        <div id="footerLinks">
+            <h3>Liên kết</h3>
+            <a href="index.html">Trang chủ</a>
+            <a href="products.html">Sản phẩm</a>
+            <a href="cart.html">Giỏ hàng</a>
+            <a href="index.html#contact">Liên hệ</a>
+        </div>
+
+        <div id="contact">
+            <h3>Liên hệ</h3>
+            <p>📍 TP. Hồ Chí Minh</p>
+            <p>📞 039 403 8274</p>
+            <p>✉ nhomwed@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div id="copyright">
+        <p>© 2026 EyeWear. All rights reserved.</p>
+    </div>
+
+</footer>
+
+
+<script src="js/checkout.js"></script>
+
+</body>
+</html>
